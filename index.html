@@ -38,7 +38,7 @@
       >
     </div>
     <div id="bg-wrap">
-      <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+      <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
         <defs>
           <radialGradient
             id="Gradient1"
@@ -232,5 +232,33 @@
         </rect>
       </svg>
     </div>
+  </div>
+
+  <script>
+    function tileSVGForMobile() {
+      var bgWrap = document.getElementById('bg-wrap');
+      var svg = bgWrap.innerHTML; // Get the SVG markup
+      var viewportWidth = window.innerWidth;
+  
+      // Clear previous content
+      bgWrap.innerHTML = '';
+  
+      // Decide how many SVGs you need based on viewport width
+      var tiles = Math.ceil(viewportWidth / 100); // Assuming 100px is the width of your SVG
+  
+      // Only tile if on mobile (you can adjust the max-width as necessary)
+      if (viewportWidth <= 767) {
+        for (var i = 0; i < tiles; i++) {
+          bgWrap.innerHTML += svg; // Add SVG markup
+        }
+      } else {
+        bgWrap.innerHTML = svg; // Just show one SVG
+      }
+    }
+  
+    // Run on load and on resize
+    window.addEventListener('load', tileSVGForMobile);
+    window.addEventListener('resize', tileSVGForMobile);
+  </script>
   </body>
 </html>

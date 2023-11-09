@@ -15,11 +15,17 @@
     min-height: 50px; /* Minimum height to maintain vertical aesthetics */
     /* Additional adjustments can be made here */
   }
-  #bg-wrap {
-    background-size: 200% 200%; /* Enlarge the SVG */
-    background-position: center; /* Center the background ima ge */
+    #bg-wrap {
+      width: 100vw; /* viewport width */
+      height: 100vh; /* viewport height */
+      overflow: hidden; /* hide any overflow */
+    }
+  
+    #bg-wrap svg {
+      width: 100%;
+      height: 100%;
+    }
   }
-}
 
 
 /* Global Styles */
