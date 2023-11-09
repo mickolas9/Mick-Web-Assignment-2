@@ -365,11 +365,10 @@ header,
 
 
 .bento-container h1,
-.bento-container h2,
- {
+.bento-container h2, {
   padding: 10px 0; /* Example padding */
   color: #fff; 
-/}
+}
 
 .bento-container p {
   font-size: 16px; /* adjust as needed */
