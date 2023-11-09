@@ -133,8 +133,8 @@ header,
   }
   
   .grid-container:hover {
-  transform: scale(1.02); /* increase size on hover */
-  }
+  transform: scale(1.025); /* increase size on hover */
+}
   
 
 .grid-item {
@@ -157,12 +157,12 @@ header,
 
 .grid-item {
   /* existing styles */
-  transition: transform 0.2s ease-in-out; /* add transition property */
+  transition: transform 0.25s ease-in-out; /* add transition property */
 }
 .grid-item:hover {
   transform: translateY(-5px) scale(1.015);
   box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
-  transform: scale(1.015); /* increase size on hover */
+  transform: scale(1.025); /* increase size on hover */
 }
 
 @media (max-width: 768px) {
@@ -192,7 +192,6 @@ header,
 
 #dark-mode {
   /* specific styles for dark mode box */
-
   text-align: center;
   text-decoration: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -229,7 +228,7 @@ header,
   transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease,
     border 0.2s ease; /* Added border to the transition */
   box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
-  border: 2px solid rgba(255, 255, 255, 0.15); /* Adjust the color and size as needed */
+  border: 2px solid rgba(255, 255, 255, 0.25); /* Adjust the color and size as needed */
 }
 
 #glass:hover h2 {
@@ -237,6 +236,7 @@ header,
   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff,
     0 0 50px #fff, 0 0 60px #fff, 0 0 70px #fff;
   -webkit-text-stroke: inner 1px #fff;
+  font-weight: 400;
 }
 
 #three-d-visuals {
@@ -249,7 +249,6 @@ header,
     0 0 40px #00ffff, 0 0 50px #ff00ff, 0 0 60px #00ffff, 0 0 70px #ff00ff;
   transform: perspective(1000px) rotateX(30deg) rotateY(-30deg);
   transition: 0.3s;
-
   text-shadow: 1px 1px 0 grey, 1px 2px 0 grey, 1px 3px 0 grey, 1px 4px 0 grey,
     1px 5px 0 grey, 1px 6px 0 grey, 1px 7px 0 grey, 1px 8px 0 grey,
     5px 13px 15px black;
