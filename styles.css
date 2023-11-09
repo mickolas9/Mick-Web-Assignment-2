@@ -2,7 +2,7 @@
 /* Media query for mobile devices */
 @media (max-width: 600px) {
   header {
-    font-size: 4.5vw; /* Adapt font size to the viewport width */
+    font-size: 3vw; /* Smaller font size for mobile */
     padding: 10px; /* Consistent padding on all sides */
     white-space: nowrap; /* Keep header text on a single line */
     overflow: hidden; /* Hide text that overflows the header container */
