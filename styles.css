@@ -1,4 +1,18 @@
 /* Global Styles */
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+  header {
+    font-size: 4.5vw; /* Adapt font size to the viewport width */
+    padding: 10px; /* Consistent padding on all sides */
+    white-space: nowrap; /* Keep header text on a single line */
+    overflow: hidden; /* Hide text that overflows the header container */
+    text-overflow: ellipsis; /* Add an ellipsis to text that overflows */
+    height: auto; /* The height adjusts to the content */
+    min-height: 50px; /* Minimum height to ensure touch friendliness */
+    /* Additional styling can be added here if needed */
+  }
+}
+
 @media (max-width: 768px) {
   .grid-container {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -6,15 +20,15 @@
   
 
   header {
-    font-size: 2vw; /* Scale text size based on the viewport width */
-    padding: 10px 10px; /* Reduce padding */
-    white-space: nowrap; /* Prevent text from wrapping */
-    overflow: hidden; /* Hide overflowed text */
-    text-overflow: ellipsis; /* Show an ellipsis for overflowed content */
+    font-size: min(5vw, 18px); /* Use a minimum value for font size */
+    padding: 10px; /* Keep consistent padding, or reduce if necessary */
+    white-space: normal; /* Allow text to wrap */
+    overflow: visible; /* Show overflowed text */
+    text-overflow: clip; /* Clip overflowed content */
     height: auto; /* Adjust height accordingly */
     min-height: 50px; /* Minimum height to maintain vertical aesthetics */
-    /* Additional adjustments can be made here */
   }
+
     #bg-wrap {
       width: 100vw; /* viewport width */
       height: 100vh; /* viewport height */
