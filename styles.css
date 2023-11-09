@@ -157,7 +157,7 @@ header,
 
 .grid-item {
   /* existing styles */
-  transition: transform 0.25s ease-in-out; /* add transition property */
+  transition: transform 0.2s ease-in-out; /* add transition property */
 }
 .grid-item:hover {
   transform: translateY(-5px) scale(1.015);
