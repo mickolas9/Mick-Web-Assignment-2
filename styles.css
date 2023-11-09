@@ -3,6 +3,7 @@
   .grid-container {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
+  
 
   header {
     font-size: 2vw; /* Scale text size based on the viewport width */
@@ -13,6 +14,10 @@
     height: auto; /* Adjust height accordingly */
     min-height: 50px; /* Minimum height to maintain vertical aesthetics */
     /* Additional adjustments can be made here */
+  }
+  #bg-wrap {
+    background-size: 200% 200%; /* Enlarge the SVG */
+    background-position: center; /* Center the background ima ge */
   }
 }
 
