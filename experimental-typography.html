@@ -240,15 +240,17 @@
         spaces.
       </p>
     </div>
-
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var homeLink = document.getElementById("homeLink");
-        if (homeLink && window.location.pathname !== "/index.html") {
-          homeLink.innerHTML = "Back"; // Change to a back icon or different text
-          homeLink.href = "javascript:history.back()"; // Change href to go back
-        }
+      document.addEventListener("DOMContentLoaded", function() {
+          var homeLink = document.getElementById("homeLink");
+          // Check if the current page is not the homepage
+          if (homeLink && !window.location.pathname.endsWith("index.html")) {
+              homeLink.textContent = 'Back';
+              homeLink.href = 'javascript:history.back()';
+          }
+          // If it's the homepage, keep the original text
       });
-    </script>
+  </script>
+  
   </body>
 </html>
