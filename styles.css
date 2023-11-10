@@ -9,612 +9,615 @@
     text-overflow: ellipsis; /* Add an ellipsis to text that overflows */
     height: auto; /* The height adjusts to the content */
     min-height: 50px; /* Minimum height to ensure touch friendliness */
-    /* Additional styling can be added here if needed */
-  }
+  /* Additional styling can be added here if needed */
+}
+
 }
 
 @media (max-width: 768px) {
   .grid-container {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-  
+}
 
-  header {
-    font-size: min(5vw, 18px); /* Use a minimum value for font size */
-    padding: 10px; /* Keep consistent padding, or reduce if necessary */
-    white-space: normal; /* Allow text to wrap */
-    overflow: visible; /* Show overflowed text */
-    text-overflow: clip; /* Clip overflowed content */
-    height: auto; /* Adjust height accordingly */
-    min-height: 50px; /* Minimum height to maintain vertical aesthetics */
+
+
+header {
+  font-size: min(5vw, 18px); /* Use a minimum value for font size */
+  padding: 10px; /* Keep consistent padding, or reduce if necessary */
+  white-space: normal; /* Allow text to wrap */
+  overflow: visible; /* Show overflowed text */
+  text-overflow: clip; /* Clip overflowed content */
+  height: auto; 
+  min-height: 50px; /* Minimum height to maintain vertical aesthetics */
+}
+
+  #bg-wrap {
+    width: 100vw; /* viewport width */
+    height: 100vh; /* viewport height */
+    overflow: hidden; /* hide any overflow */
   }
 
-    #bg-wrap {
-      width: 100vw; /* viewport width */
-      height: 100vh; /* viewport height */
-      overflow: hidden; /* hide any overflow */
-    }
-  
-    #bg-wrap svg {
-      width: 100%;
-      height: 100%;
-    }
+  #bg-wrap svg {
+    width: 100%;
+    height: 100%;
   }
+}
 
 
 /* Global Styles */
 
 body {
-  margin: 0;
-  height: 100vh;
-  -webkit-animation: gradient 15s ease infinite;
-  font-family: "Inter", sans-serif;
-  font-weight: normal;
+margin: 0;
+height: 100vh;
+-webkit-animation: gradient 15s ease infinite;
+font-family: "Inter", sans-serif;
+font-weight: normal;
 }
 
 header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  margin-bottom: 40px;
-  color: #fff;
-  font-size: 1.5em;
-  font-weight: bold;
-  text-transform: uppercase;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1;
-  height: 100px;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(80px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-  border: 2px solid rgba(255, 255, 255, 0.1); /* Adjust the color and size as needed */
-  border-top: none;
-  border-left: none;
-  border-right:none;
-  
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 20px;
+margin-bottom: 40px;
+color: #fff;
+font-size: 1.5em;
+font-weight: bold;
+text-transform: uppercase;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 1;
+height: 100px;
+padding: 10px;
+background-color: rgba(0, 0, 0, 0.2);
+backdrop-filter: blur(80px);
+box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+border: 2px solid rgba(255, 255, 255, 0.1); 
+border-top: none;
+border-left: none;
+border-right:none;
+
 }
 
 header h1 {
-  /* Basic styling */
-  color: #fff; /* Change the color as needed */
-  text-align: center;
-  transition: text-shadow 0.5s ease-in-out; /* Smooth transition for the glow effect */
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0); /* Initial state: no glow */
+/* Basic styling */
+color: #fff; /* Change the color as needed */
+text-align: center;
+transition: text-shadow 0.5s ease-in-out; /* Smooth transition for the glow effect */
+text-shadow: 0 0 5px rgba(255, 255, 255, 0); /* Initial state: no glow */
 }
 
 /* Glow effect on hover */
 header h1:hover {
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), /* White glow */
-  0 0 20px rgba(255, 255, 255, 0.3); /* Outer softer glow */
-  
+text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), /* White glow */
+0 0 20px rgba(255, 255, 255, 0.3); /* Outer softer glow */
+
 }
 
 a:-webkit-any(link, visited) {
-  color: #fff;
-  text-decoration: none;
+color: #fff;
+text-decoration: none;
 }
 
 a:hover {
-  color: #fff;
-  text-decoration: none;
+color: #fff;
+text-decoration: none;
 }
 
 a:-webkit-any-link {
-  color: #fff;
-  text-decoration: none;
+color: #fff;
+text-decoration: none;
 }
 
 
 
 #bg-wrap {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  background-color: rgb(218, 218, 218); /* Or your preferred background styles */
-  background-size: cover;
-  background-position: center;
-  filter: brightness(110%) hue-rotate(45deg);
+position: fixed;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+z-index: -1;
+background-color: rgb(218, 218, 218); /* Or your preferred background styles */
+background-size: cover;
+background-position: center;
+filter: brightness(110%) hue-rotate(45deg);
 }
 
 header,
 .grid-container,
 .grid-item
 .bento-container {
-  position: relative; /* This makes z-index applicable */
-  z-index: 1; /* Higher than the SVG's z-index */
+position: relative; /* This makes z-index applicable */
+z-index: 1; /* Higher than the SVG's z-index */
 }
 
 .grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* three columns with equal width */
-  grid-auto-rows: 1fr;
-  gap: 30px;
-  margin: 160px 20px 20px auto; /* top, horizontal, bottom */
-  position: relative;
-  width: 80vw; /* container width is 80% of the viewport width */
-  max-width: 1200px; /* maximum width of the container, adjust as needed */
-  margin: 0 auto;
-  border: 2px solid rgba(255, 255, 255, 0.1); /* Adjust the color and size as needed */
-  padding: 30px;
-  border-radius: 60px;
-  background-color: rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(80px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+display: grid;
+grid-template-columns: repeat(3, 1fr); /* three columns with equal width */
+grid-auto-rows: 1fr;
+gap: 30px;
+margin: 160px 20px 20px auto; /* top, horizontal, bottom */
+position: relative;
+width: 80vw; /* container width is 80% of the viewport width */
+max-width: 1200px; /* maximum width of the container,   */
+margin: 0 auto;
+border: 2px solid rgba(255, 255, 255, 0.1); 
+padding: 30px;
+border-radius: 60px;
+background-color: rgba(0, 0, 0, 0.15);
+backdrop-filter: blur(80px);
+box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .grid-container {
-  /* existing styles */
-  transition: transform 0.5s ease-in-out; /* add transition property */
-  }
-  
-  .grid-container:hover {
-  transform: scale(1.025); /* increase size on hover */
-}
-  
-
-.grid-item {
-  background-color: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(30px);
-  border-radius: 30px;
-  padding: 60px 40px;
-  text-align: center;
-  text-decoration: none;
-  color: #ffffff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  font-size: 1.5em;
-  font-weight: normal;
-  border: 2px solid rgba(255, 255, 255, 0.1); /* Adjust the color and size as needed */
+/* existing styles */
+transition: transform 0.5s ease-in-out; /* add transition property */
 }
 
+.grid-container:hover {
+transform: scale(1.025); /* increase size on hover */
+}
+
+
 .grid-item {
-  /* existing styles */
-  transition: transform 0.25s ease-in-out; /* add transition property */
+background-color: rgba(255, 255, 255, 0.5);
+backdrop-filter: blur(30px);
+border-radius: 30px;
+padding: 60px 40px;
+text-align: center;
+text-decoration: none;
+color: #ffffff;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+display: flex;
+align-items: center;
+justify-content: center;
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+font-size: 1.5em;
+font-weight: normal;
+border: 2px solid rgba(255, 255, 255, 0.1); 
+}
+
+.grid-item {
+/* existing styles */
+transition: transform 0.25s ease-in-out; /* add transition property */
 }
 .grid-item:hover {
-  transform: translateY(-5px) scale(1.015);
-  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
-  transform: scale(1.025); /* increase size on hover */
+transform: translateY(-5px) scale(1.015);
+box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+transform: scale(1.025); /* increase size on hover */
 }
 
 @media (max-width: 768px) {
   .grid-container {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
+}
+
 }
 
 /* Specific item styles */
 #minimalism {
-  /* specific styles for minimalism box */
+/* specific styles for minimalism box */
 }
 
 #minimalism:hover {
-  background-color: #fff;
-  color: #333;
-  transform: translateY(-5px);
-  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
-  filter: opacity(90%);
+background-color: #fff;
+color: #333;
+transform: translateY(-5px);
+box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+filter: opacity(90%);
 }
 
 #minimalism:hover h2 {
-  font-weight: 100;
-  text-transform: lowercase;
-  color: black;
+font-weight: 100;
+text-transform: lowercase;
+color: black;
 }
 
 #dark-mode {
-  /* specific styles for dark mode box */
-  text-align: center;
-  text-decoration: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
-  cursor: pointer;
+/* specific styles for dark mode box */
+text-align: center;
+text-decoration: none;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+display: flex;
+align-items: center;
+justify-content: center;
+transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+cursor: pointer;
 }
 
 #dark-mode:hover {
-  background-color: #333;
-  color: #fff;
-  transform: translateY(-5px);
-  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
-  filter: brightness(80%);
+background-color: #333;
+color: #fff;
+transform: translateY(-5px);
+box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+filter: brightness(80%);
 }
 
 #dark-mode:hover h2 {
-  color: #ff0;
-  text-shadow: 0 0 10px #ff0, 0 0 20px #ff0, 0 0 30px #ff0, 0 0 40px #ff0,
-    0 0 50px #ff0, 0 0 60px #ff0, 0 0 70px #ff0;
+color: #ff0;
+text-shadow: 0 0 10px #ff0, 0 0 20px #ff0, 0 0 30px #ff0, 0 0 40px #ff0,
+  0 0 50px #ff0, 0 0 60px #ff0, 0 0 70px #ff0;
 }
 
 #glass {
-  /* specific styles for Glass box */
+/* specific styles for Glass box */
 }
 
 #glass:hover {
-  background-color: rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(30px);
-  filter:brightness(200%)
-  transform: translateY(-5px);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease,
-    border 0.2s ease; /* Added border to the transition */
-  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
-  border: 2px solid rgba(255, 255, 255, 0.25); /* Adjust the color and size as needed */
+background-color: rgba(255, 255, 255, 0.35);
+backdrop-filter: blur(30px);
+filter:brightness(200%)
+transform: translateY(-5px);
+transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease,
+  border 0.2s ease; /* Added border to the transition */
+box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+border: 2px solid rgba(255, 255, 255, 0.25); 
 }
 
 #glass:hover h2 {
-  color: #fff;
-  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff,
-    0 0 50px #fff, 0 0 60px #fff, 0 0 70px #fff;
-  -webkit-text-stroke: inner 1px #fff;
-  font-weight: 400;
+color: #fff;
+text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff,
+  0 0 50px #fff, 0 0 60px #fff, 0 0 70px #fff;
+-webkit-text-stroke: inner 1px #fff;
+font-weight: 400;
 }
 
 #three-d-visuals {
-  /* specific styles for 3D visuals box */
+/* specific styles for 3D visuals box */
 }
 
 #three-d-visuals:hover {
-  background-image: linear-gradient(to bottom right, #ff00ff, #00ffff);
-  text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff, 0 0 30px #ff00ff,
-    0 0 40px #00ffff, 0 0 50px #ff00ff, 0 0 60px #00ffff, 0 0 70px #ff00ff;
-  transform: perspective(1000px) rotateX(30deg) rotateY(-30deg);
-  transition: 0.3s;
-  text-shadow: 1px 1px 0 grey, 1px 2px 0 grey, 1px 3px 0 grey, 1px 4px 0 grey,
-    1px 5px 0 grey, 1px 6px 0 grey, 1px 7px 0 grey, 1px 8px 0 grey,
-    5px 13px 15px black;
+background-image: linear-gradient(to bottom right, #ff00ff, #00ffff);
+text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff, 0 0 30px #ff00ff,
+  0 0 40px #00ffff, 0 0 50px #ff00ff, 0 0 60px #00ffff, 0 0 70px #ff00ff;
+transform: perspective(1000px) rotateX(30deg) rotateY(-30deg);
+transition: 0.3s;
+text-shadow: 1px 1px 0 grey, 1px 2px 0 grey, 1px 3px 0 grey, 1px 4px 0 grey,
+  1px 5px 0 grey, 1px 6px 0 grey, 1px 7px 0 grey, 1px 8px 0 grey,
+  5px 13px 15px black;
 }
 
 #experimental-typography {
-  /* specific styles for experimental typography box */
+/* specific styles for experimental typography box */
 }
 #experimental-typography:hover {
-  /* specific styles for experimental typography box on hover */
-  background-color: black;
-  filter: brightness(1.4);
+/* specific styles for experimental typography box on hover */
+background-color: black;
+filter: brightness(1.4);
 }
 
 
 
 #experimental-typography:hover h2 {
-  /* specific styles for experimental typography text on hover */
-  animation: glitch 0.5s linear infinite;
-  color: #00aeff;
-  text-shadow: none;
-  font-weight: 500;
-  text-transform: uppercase;
+/* specific styles for experimental typography text on hover */
+animation: glitch 0.5s linear infinite;
+color: #00aeff;
+text-shadow: none;
+font-weight: 500;
+text-transform: uppercase;
 }
 
 
 @keyframes textclip {
-  to {
-    background-position: 200% center;
-  }
+to {
+  background-position: 200% center;
+}
 }
 
 @keyframes glitch {
-  0% {
-    transform: skew(0deg);
-    opacity: 1;
-  }
-  20% {
-    transform: skew(20deg);
-    opacity: 0.7;
-  }
-  40% {
-    transform: skew(-20deg);
-    opacity: 0.7;
-  }
-  60% {
-    transform: skew(10deg);
-    opacity: 0.7;
-  }
-  80% {
-    transform: skew(-10deg);
-    opacity: 0.7;
-  }
-  100% {
-    transform: skew(0deg);
-    opacity: 1;
-  }
+0% {
+  transform: skew(0deg);
+  opacity: 1;
+}
+20% {
+  transform: skew(20deg);
+  opacity: 0.7;
+}
+40% {
+  transform: skew(-20deg);
+  opacity: 0.7;
+}
+60% {
+  transform: skew(10deg);
+  opacity: 0.7;
+}
+80% {
+  transform: skew(-10deg);
+  opacity: 0.7;
+}
+100% {
+  transform: skew(0deg);
+  opacity: 1;
+}
 }
 
 #neumorphism {
-  /* specific styles for neumorphism box */
+/* specific styles for neumorphism box */
 }
 
 .neumorphism {
-  background-color: #f0f0f0;
-  border-radius: 20px;
-  padding: 60px 40px;
-  text-align: center;
-  text-decoration: none;
-  box-shadow: 10px 10px 20px #cbced1, -10px -10px 20px #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
-  cursor: pointer;
-  font-size: 1.5em;
-  font-weight: normal;
+background-color: #f0f0f0;
+border-radius: 20px;
+padding: 60px 40px;
+text-align: center;
+text-decoration: none;
+box-shadow: 10px 10px 20px #cbced1, -10px -10px 20px #ffffff;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+cursor: pointer;
+font-size: 1.5em;
+font-weight: normal;
 }
 
 #neumorphism:hover {
-  box-shadow: inset 5px 5px 10px #d1cfcb, inset -5px -5px 10px #ffffff;
-  background-color: #e0e0e0;
-  box-shadow: 5px 5px 10px #cbced1, -5px -5px 10px #ffffff;
-  transform: translateY(-5px);
-  filter: brightness(90%);
+box-shadow: inset 5px 5px 10px #d1cfcb, inset -5px -5px 10px #ffffff;
+background-color: #e0e0e0;
+box-shadow: 5px 5px 10px #cbced1, -5px -5px 10px #ffffff;
+transform: translateY(-5px);
+filter: brightness(90%);
 }
 
 #neumorphism:hover h2 {
-  color: #ffffff;
-  text-shadow: 2px 2px 4px rgba(63, 34, 89, 0.3);
-  background-color: #f0f0f0;
-  border-radius: 10px;
-  padding: 5px;
-  box-shadow: 10px 10px 20px #cbced1, -10px -10px 20px #ffffff;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
-  cursor: pointer;
+color: #ffffff;
+text-shadow: 2px 2px 4px rgba(63, 34, 89, 0.3);
+background-color: #f0f0f0;
+border-radius: 10px;
+padding: 5px;
+box-shadow: 10px 10px 20px #cbced1, -10px -10px 20px #ffffff;
+transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+cursor: pointer;
 }
 
 
 
 .bento-container {
-  position: relative; /* This makes z-index applicable */
-  margin: 160px 20px 20px auto; /* Adjust top margin to not overlap the header */
-  width: 80vw; /* container width is 80% of the viewport width */
-  max-width: 1200px; /* maximum width of the container, adjust as needed */
-  margin: 0 auto;
-  border: 2px solid rgba(255, 255, 255, 0.15);
-  padding: 30px;
-  border-radius: 60px;
-  background-color: rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(80px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+position: relative; /* This makes z-index applicable */
+margin: 160px 20px 20px auto; /* Adjust top margin to not overlap the header */
+width: 80vw; /* container width is 80% of the viewport width */
+max-width: 1200px; /* maximum width of the container,   */
+margin: 0 auto;
+border: 2px solid rgba(255, 255, 255, 0.15);
+padding: 30px;
+border-radius: 60px;
+background-color: rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(80px);
+box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 
 .bento-container h1,
 .bento-container h2, {
-  padding: 10px 0; /* Example padding */
-  color: #fff; 
+padding: 10px 0; /* Example padding */
+color: #fff; 
 }
 
 .bento-container p {
-  font-size: 16px; /* adjust as needed */
-  line-height: 1.5; /* adjust as needed */
-  color: #fff; /* assuming you want black text */
-  margin-bottom: 20px; /* adjust as needed */
+font-size: 16px; /*   */
+line-height: 1.5; /*   */
+color: #fff; /* assuming you want black text */
+margin-bottom: 20px; /*  */
 }
 
 
 h2 {
-  display: block;
-  font-size: 1.5em;
-  margin-block-start: 0.83em;
-  margin-block-end: 0.83em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  font-weight: bold;
-  color: #fff;
+display: block;
+font-size: 1.5em;
+margin-block-start: 0.83em;
+margin-block-end: 0.83em;
+margin-inline-start: 0px;
+margin-inline-end: 0px;
+font-weight: bold;
+color: #fff;
 }
 
 h1 {
-  display: block;
-  font-size: 1.5em;
-  margin-block-start: 0.83em;
-  margin-block-end: 0.83em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  font-weight: bold;
-  color: #fff;
+display: block;
+font-size: 1.5em;
+margin-block-start: 0.83em;
+margin-block-end: 0.83em;
+margin-inline-start: 0px;
+margin-inline-end: 0px;
+font-weight: bold;
+color: #fff;
 }
 
 #darkmode .bento-container {
-  position: relative; /* This makes z-index applicable */
-  margin: 160px 20px 20px auto; /* Adjust top margin to not overlap the header */
-  width: 80vw; /* container width is 80% of the viewport width */
-  max-width: 1200px; /* maximum width of the container, adjust as needed */
-  margin: 0 auto;
-  border: 2px solid rgba(255, 255, 255, 0.15);
-  padding: 30px;
-  border-radius: 60px;
-  background-color: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(80px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+position: relative; /* This makes z-index applicable */
+margin: 160px 20px 20px auto; /* Adjust top margin to not overlap the header */
+width: 80vw; /* container width is 80% of the viewport width */
+max-width: 1200px; /* maximum width of the container,   */
+margin: 0 auto;
+border: 2px solid rgba(255, 255, 255, 0.15);
+padding: 30px;
+border-radius: 60px;
+background-color: rgba(0, 0, 0, 0.3);
+backdrop-filter: blur(80px);
+box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 #darkmode #bg-wrap {
-  background-color: #000000; /* Or your preferred background styles */
-  background-size: cover;
-  background-position: center;
-  filter: hue-rotate(0deg) saturate(90%) brightness(50%);
+background-color: #000000; /* Or your preferred background styles */
+background-size: cover;
+background-position: center;
+filter: hue-rotate(0deg) saturate(90%) brightness(50%);
 }
 
 #minimalismpage #bg-wrap {
-  filter: grayscale(100%);
-  background-color: #505050; /* Or your preferred background styles */
+filter: grayscale(100%);
+background-color: #505050; /* Or your preferred background styles */
 }
 
 #minimalismpage .bento-container {
-  background-color: rgba(255, 255, 255, 0.2);
+background-color: rgba(255, 255, 255, 0.2);
 }
 
 #threedpage .bento-container {
-  box-shadow:inset 5px 8px 8px rgba(0,0,0,.2),inset -2px -2px 10px hsla(0,0%,100%,.2);
-  -webkit-transform: translateX(-3px);
-  transform: translateX(-3px);
+box-shadow:inset 5px 8px 8px rgba(0,0,0,.2),inset -2px -2px 10px hsla(0,0%,100%,.2);
+-webkit-transform: translateX(-3px);
+transform: translateX(-3px);
 }
 #threedpage header h1 {
-  text-shadow:none;
+text-shadow:none;
 }
 #threedpage h2 {
-  text-shadow: 1px 1px 0 grey, 1px 2px 0 grey, 1px 3px 0 grey, 1px 4px 0 grey,
-  1px 5px 0 grey, 1px 6px 0 grey, 1px 7px 0 grey, 1px 8px 0 grey,
-  5px 13px 15px black;
+text-shadow: 1px 1px 0 grey, 1px 2px 0 grey, 1px 3px 0 grey, 1px 4px 0 grey,
+1px 5px 0 grey, 1px 6px 0 grey, 1px 7px 0 grey, 1px 8px 0 grey,
+5px 13px 15px black;
 }
 
 #threedpage h1 {
-  text-shadow: 1px 1px 0 grey, 1px 2px 0 grey, 1px 3px 0 grey, 1px 4px 0 grey,
-  1px 5px 0 grey, 1px 6px 0 grey, 1px 7px 0 grey, 1px 8px 0 grey,
-  5px 13px 15px black;
+text-shadow: 1px 1px 0 grey, 1px 2px 0 grey, 1px 3px 0 grey, 1px 4px 0 grey,
+1px 5px 0 grey, 1px 6px 0 grey, 1px 7px 0 grey, 1px 8px 0 grey,
+5px 13px 15px black;
 }
 
 #neumorphismpage #bg-wrap {
-  filter: grayscale(75%);
+filter: grayscale(75%);
 }
 
 #neumorphismpage .bento-container {
-  box-shadow: inset 5px 5px 10px #d1cfcb, inset -5px -5px 10px #ffffff;
-  background-color: #e0e0e0;
-  box-shadow: 5px 5px 10px #cbced1, -5px -5px 10px #ffffff;
-  transform: translateY(-5px);
-  filter: brightness(90%);
+box-shadow: inset 5px 5px 10px #d1cfcb, inset -5px -5px 10px #ffffff;
+background-color: #e0e0e0;
+box-shadow: 5px 5px 10px #cbced1, -5px -5px 10px #ffffff;
+transform: translateY(-5px);
+filter: brightness(90%);
 }
 
 #glasspage .bento-container {
-  background-color: rgba(0, 0, 0, 0.15);
+background-color: rgba(0, 0, 0, 0.15);
 }
 
 #neumorphismpage p {
-  color: darkslategrey;
+color: darkslategrey;
 }
 
 #neumorphismpage h2 {
-  color: darkslategray;
+color: darkslategray;
 }
 
 #threedpage .bento-container {
-  background-color: rgba(0, 0, 0, 0.15);
+background-color: rgba(0, 0, 0, 0.15);
 }
 
 #typepage .bento-container {
-  background-color: rgba(0, 0, 0, 0.25);
+background-color: rgba(0, 0, 0, 0.25);
 }
 
 #typepage .bento-container h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  color: #fff;
+font-size: 2rem;
+font-weight: bold;
+text-transform: uppercase;
+letter-spacing: 0.2rem;
+color: #fff;
 text-shadow: 1px 1px 0 #000, 3px 3px 0 #ff0000;
 }
 
 #typepage .bento-container h1 {
-  font-size: 2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  color: #fff;
-  text-shadow: 1px 2px 0 #000, 3px 3px 0 #000, 4px 4px 0 #000, 5px 5px 0 #000, 6px 6px 0 #000, 7px 7px 0 #000;
+font-size: 2rem;
+font-weight: bold;
+text-transform: uppercase;
+letter-spacing: 0.2rem;
+color: #fff;
+text-shadow: 1px 2px 0 #000, 3px 3px 0 #000, 4px 4px 0 #000, 5px 5px 0 #000, 6px 6px 0 #000, 7px 7px 0 #000;
 }
 
 .experimental-typography .animated-text {
-  font-size: 36px;
-  color: #0f0; /* Bright green color */
-  position: relative;
-  animation: glitchEffect 1s infinite;
+font-size: 36px;
+color: #0f0; /* Bright green color */
+position: relative;
+animation: glitchEffect 1s infinite;
 }
 
 @keyframes glitchEffect {
-  0%, 100% {
-      text-shadow: 2px 0 #f00, -2px 0 #00f; /* Red and blue shadows */
-      transform: skew(5deg);
-  }
-  33% {
-      text-shadow: -2px 0 #f00, 2px 0 #00f;
-      transform: skew(-5deg);
-  }
-  66% {
-      text-shadow: 2px 0 #f00, -2px 0 #00f;
-      transform: skew(5deg);
-  }
+0%, 100% {
+    text-shadow: 2px 0 #f00, -2px 0 #00f; /* Red and blue shadows */
+    transform: skew(5deg);
+}
+33% {
+    text-shadow: -2px 0 #f00, 2px 0 #00f;
+    transform: skew(-5deg);
+}
+66% {
+    text-shadow: 2px 0 #f00, -2px 0 #00f;
+    transform: skew(5deg);
+}
 }
 
 
 
 .minimalism-example .card {
-  width: 200px;
-  height: 100px;
-  background-color: #fff;
-  margin: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease;
+width: 200px;
+height: 100px;
+background-color: #fff;
+margin: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+display: flex;
+align-items: center;
+justify-content: center;
+transition: transform 0.3s ease;
 }
 
 .minimalism-example .card:hover {
-  transform: scale(1.05);
+transform: scale(1.05);
 }
 
 .glass-container {
-  perspective: 1000px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 300px;
+perspective: 1000px;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 300px;
 }
 
 .glass-card {
-  width: 200px;
-  height: 200px;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  transition: transform 0.3s ease;
+width: 200px;
+height: 200px;
+background: rgba(255, 255, 255, 0.2);
+backdrop-filter: blur(10px);
+border-radius: 10px;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+transition: transform 0.3s ease;
 }
 
 .glass-card p {
-  margin: 0;
-  padding: 20px;
-  color: #fff;
-  font-size: 16px;
+margin: 0;
+padding: 20px;
+color: #fff;
+font-size: 16px;
 }
 
 
 .cube-container {
-  perspective: 600px;
-  width: 200px;
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+perspective: 600px;
+width: 200px;
+height: 200px;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 .cube {
-  position: relative;
-  width: 80px; /* Smaller size */
-  height: 80px; /* Smaller size */
-  transform-style: preserve-3d;
-  animation: rotateCube 5s infinite linear;
+position: relative;
+width: 80px; /* Smaller size */
+height: 80px; /* Smaller size */
+transform-style: preserve-3d;
+animation: rotateCube 5s infinite linear;
 }
 
 .cube .face {
-  position: absolute;
-  width: 80px; /* Smaller size */
-  height: 80px; /* Smaller size */
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid #ccc;
+position: absolute;
+width: 80px; /* Smaller size */
+height: 80px; /* Smaller size */
+background-color: rgba(255, 255, 255, 0.8);
+border: 1px solid #ccc;
 }
 
 /* Adding colors to each face */
@@ -626,26 +629,27 @@ text-shadow: 1px 1px 0 #000, 3px 3px 0 #ff0000;
 .cube .bottom { background-color: #ff66ff; transform: rotateX(-90deg)  translateZ(40px); }
 
 @keyframes rotateCube {
-  0%   { transform: rotateX(0) rotateY(0); }
-  100% { transform: rotateX(360deg) rotateY(360deg); }
+0%   { transform: rotateX(0) rotateY(0); }
+100% { transform: rotateX(360deg) rotateY(360deg); }
 }
 
 .neumorphism-example .neu-button:hover {
-  box-shadow: inset 5px 5px 10px #d1cfcb, inset -5px -5px 10px #ffffff;
+box-shadow: inset 5px 5px 10px #d1cfcb, inset -5px -5px 10px #ffffff;
 }
 
 .dark-mode-toggle button {
-  background-color: #333; /* Dark background */
-  color: #fff; /* Light text */
-  border: 2px solid #fff; /* Light border */
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+background-color: #333; /* Dark background */
+color: #fff; /* Light text */
+border: 2px solid #fff; /* Light border */
+padding: 10px 20px;
+cursor: pointer;
+transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 .dark-mode-toggle button.light-mode {
-  background-color: #fff; /* Light background */
-  color: #333; /* Dark text */
-  border: 2px solid #333; /* Dark border */
+background-color: #fff; /* Light background */
+color: #333; /* Dark text */
+border: 2px solid #333; /* Dark border */
 }
+
 

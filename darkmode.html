@@ -241,19 +241,17 @@
       </p>
     </div>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-          var homeLink = document.getElementById("homeLink");
-          // Check if the current page is not the homepage
-          if (homeLink && !window.location.pathname.endsWith("index.html")) {
-              homeLink.textContent = 'Back';
-              homeLink.href = 'javascript:history.back()';
-          }
-          // If it's the homepage, keep the original text
-      });
-  </script>
-  
-    <script>
+ <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var homeLink = document.getElementById("homeLink");
+        // Check if the current page is not the homepage
+        if (homeLink && !window.location.pathname.endsWith("index.html")) {
+            homeLink.textContent = 'Back';
+            homeLink.href = 'javascript:history.back()';
+        }
+        // If it's the homepage, keep the original text
+    });
+
       document
         .getElementById("darkModeToggle")
         .addEventListener("click", function () {
