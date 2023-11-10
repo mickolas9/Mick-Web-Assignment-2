@@ -216,8 +216,8 @@
     <div class="bento-container">
       <div class="dark-mode-toggle">
         <button id="darkModeToggle">Toggle Dark Mode</button>
-    </div>
-    
+      </div>
+
       <h1>Dark Mode: The New Norm in 2023</h1>
       <p>
         Dark Mode became a standard in UI design in 2023, offering users an
@@ -251,14 +251,16 @@
       });
     </script>
     <script>
-      document.getElementById('darkModeToggle').addEventListener('click', function() {
-          this.classList.toggle('light-mode');
-          if (this.classList.contains('light-mode')) {
-              this.textContent = 'Dark Mode';
+      document
+        .getElementById("darkModeToggle")
+        .addEventListener("click", function () {
+          this.classList.toggle("light-mode");
+          if (this.classList.contains("light-mode")) {
+            this.textContent = "Dark Mode";
           } else {
-              this.textContent = 'Light Mode';
+            this.textContent = "Light Mode";
           }
-      });
-  </script>
+        });
+    </script>
   </body>
 </html>

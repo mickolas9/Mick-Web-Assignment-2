@@ -215,11 +215,13 @@
     <div class="bento-container">
       <div class="glass-container">
         <div class="glass-card" id="glassCard">
-            <p>Glassmorphism in Action :) Move your mouse left or right to see the glass tilt :)</p>
+          <p>
+            Glassmorphism in Action :) Move your mouse left or right to see the
+            glass tilt :)
+          </p>
         </div>
-    </div>
-    
-    
+      </div>
+
       <h1>Glassmorphism: The Trend of Transparency in 2023</h1>
       <p>
         Glassmorphism introduced a new dimension to UI design this year,
@@ -253,26 +255,29 @@
     </script>
 
     <script>
-      const glassCard = document.getElementById('glassCard');
-  
-      document.querySelector('.glass-container').addEventListener('mousemove', e => {
+      const glassCard = document.getElementById("glassCard");
+
+      document
+        .querySelector(".glass-container")
+        .addEventListener("mousemove", (e) => {
           const rect = glassCard.getBoundingClientRect();
           const x = e.clientX - rect.left;
           const y = e.clientY - rect.top;
-  
+
           const centerX = rect.width / 2;
           const centerY = rect.height / 2;
-  
+
           const deltaX = (x - centerX) / 20;
           const deltaY = (y - centerY) / 20;
-  
+
           glassCard.style.transform = `rotateY(${deltaX}deg) rotateX(${deltaY}deg)`;
-      });
-  
-      document.querySelector('.glass-container').addEventListener('mouseleave', () => {
-          glassCard.style.transform = 'none';
-      });
-  </script>
-  
+        });
+
+      document
+        .querySelector(".glass-container")
+        .addEventListener("mouseleave", () => {
+          glassCard.style.transform = "none";
+        });
+    </script>
   </body>
 </html>
