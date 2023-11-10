@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mick Web Assignment 2</title>
+    <title>Neumorphism - UI Trends Year in Review</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,7 +14,7 @@
   </head>
   <body id="neumorphismpage">
     <header>
-      <h1><a href="index.html">UI Trends Year in Review</a></h1>
+      <h1><a id="homeLink" href="index.html">UI Trends Year in Review</a></h1>
     </header>
 
     <div id="bg-wrap">
@@ -214,29 +214,41 @@
     </div>
 
     <div class="bento-container">
-      <h2>What is Neumorphism?</h2>
+      <div class="neumorphism-example">
+        <button class="neu-button">Hover Me :)</button>
+    </div>
+    
+      <h2>Neumorphism: A New UI Frontier in 2023</h2>
       <p>
-        Neumorphism, a portmanteau of "new" and "skeuomorphism," represents a
-        modern UI design trend that embodies a blend of background colors,
-        subtle shadows, and floating elements to mimic physicality in digital
-        interfaces. By combining the tactile and familiar feel of skeuomorphism
-        with the clean and minimalistic style of flat design, neumorphism
-        creates a soft, extruded plastic look with a semi-flat aesthetic. It's
-        akin to digital embossing, where buttons and switches appear as if they
-        directly emerge from the background. This design approach aims to
-        increase usability by making interactive elements more recognizable
-        through subtle visual cues, providing a fresh, sophisticated user
-        experience that feels both futuristic and grounded in the real world.
+        Neumorphism marked its presence in 2023 as a distinctive UI design
+        trend, blending background colors with subtle shadows to create a soft,
+        extruded look. This style has redefined interface aesthetics, offering a
+        new take on skeuomorphism.
       </p>
-      <h2>Neumorphism: Subtlety in Depth</h2>
+      <h2>Soft and Subtle Design</h2>
       <p>
-        Neumorphism delicately morphs user interface design, providing a
-        sensory-rich experience that plays with shadows and light to simulate
-        physicality. The tactile sensation this trend aims to reproduce is
-        nuanced yet profound, enticing users into a more engaging interaction
-        with their digital interfaces, whether they're pressing a button or
-        sliding a toggle.
+        Emphasizing softness and subtlety, neumorphism uses light shadows and
+        rounded forms to create a sense of depth. This approach has been key in
+        designing interfaces that are both visually comforting and intuitively
+        interactive.
+      </p>
+      <h2>Reviving Skeuomorphism</h2>
+      <p>
+        Neumorphism in 2023 has been about reviving and modernizing
+        skeuomorphism, making it more adaptable to current UI design standards.
+        It blends the familiar with the novel, creating interfaces that are both
+        recognizable and fresh.
       </p>
     </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var homeLink = document.getElementById("homeLink");
+        if (homeLink && window.location.pathname !== "/index.html") {
+          homeLink.innerHTML = "Back"; // Change to a back icon or different text
+          homeLink.href = "javascript:history.back()"; // Change href to go back
+        }
+      });
+    </script>
   </body>
 </html>

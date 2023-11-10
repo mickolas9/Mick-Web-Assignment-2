@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mick Web Assignment 2</title>
+    <title>Minimalism - UI Trends Year in Review</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,7 +14,7 @@
   </head>
   <body id="minimalismpage">
     <header>
-      <h1><a href="index.html">UI Trends Year in Review</a></h1>
+      <h1><a id="homeLink" href="index.html">UI Trends Year in Review</a></h1>
     </header>
 
     <div id="bg-wrap">
@@ -214,18 +214,42 @@
     </div>
 
     <div class="bento-container">
-      <h2> Embracing Simplicity: The Heart of Minimalist UI Design</h2>
-
-<p>Minimalist UI design is a visual language that communicates more by showing less. This trend hinges on the 'less is more' philosophy, where designers strip away unnecessary elements to focus on essential content, enhancing user engagement. By prioritizing simplicity, minimalism elevates the user experience to be more intuitive and distraction-free. Clean lines, monochromatic color schemes, and ample white space characterize this design trend, ensuring that users are not overwhelmed but instead are guided smoothly through their digital interactions. </p>
-
-<h2> Functionality Meets Aesthetics: The Practical Benefits of Minimalism</h2>
-
-<p>The minimalist UI trend isn't just about the visual appeal&mdash;it's deeply rooted in pracdticality. By reducing the cognitive load on users, minimalist interfaces facilitate quicker decision-making and enhance the overall user experience. This is achieved by eliminating non-essential features and focusing on core functionalities, which allows for a more streamlined and efficient interaction with the application or website. Moreover, minimalist design often translates to faster loading times and better responsiveness, as there is less visual and data clutter for the system to process.</p>
-
-<h2> The Future of Minimalism in UI: Evolution or Revolution?</h2>
-
-<p>As technology advances and user preferences evolve, the minimalist trend in UI design is poised to adapt. The core principles of minimalism are likely to remain unchanged, focusing on simplicity and usability, but the ways in which designers achieve this could become more innovative. We may see the integration of emerging technologies like augmented reality (AR) and virtual reality (VR), where minimalism will be crucial to avoid overloading users with too much sensory input. Additionally, as voice-activated interfaces and AI-driven interactions become more prevalent, the visual aspect of UI could become more streamlined, making minimalist design more relevant than ever. The future of minimalism in UI may not be a revolution with drastic changes, but rather an evolution that reinforces its timeless principles in new and exciting ways.</p>
+      <div class="minimalism-example">
+        <div class="card">Simple & Minimalist Card</div>
+    </div>
+    
+      <h1>Minimalism in 2023: The Essence of Simplicity</h1>
+      <p>
+        This year, minimalism in UI design embraced a deeper simplicity,
+        stripping back to essential elements and flat designs. The trend
+        emphasized user-centric layouts, focusing on usability and clarity.
+        Minimalism's renewed emphasis was a response to the increasingly complex
+        digital landscape.
+      </p>
+      <h2>Minimalism: A Clear Direction</h2>
+      <p>
+        In 2023, minimalism emerged as a clear direction towards user-friendly
+        designs. This approach showcased the power of less, making interfaces
+        more intuitive and accessible. Designers leaned into this trend to
+        create clean, uncluttered digital experiences.
+      </p>
+      <h2>Refinement in Simplicity</h2>
+      <p>
+        The refinement of minimalistic UI design this year was evident in the
+        subtle use of colors and whitespace, enhancing user focus and overall
+        digital experience. This refinement has redefined what it means to be
+        visually appealing yet functionally minimal.
       </p>
     </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var homeLink = document.getElementById("homeLink");
+        if (homeLink && window.location.pathname !== "/index.html") {
+          homeLink.innerHTML = "Back"; // Change to a back icon or different text
+          homeLink.href = "javascript:history.back()"; // Change href to go back
+        }
+      });
+    </script>
   </body>
 </html>

@@ -89,8 +89,6 @@ header h1 {
 
 /* Glow effect on hover */
 header h1:hover {
-  transform: translateY(-5px);
-  transition: transform 0.5s ease-in-out;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), /* White glow */
   0 0 20px rgba(255, 255, 255, 0.3); /* Outer softer glow */
   
@@ -524,3 +522,130 @@ text-shadow: 1px 1px 0 #000, 3px 3px 0 #ff0000;
   color: #fff;
   text-shadow: 1px 2px 0 #000, 3px 3px 0 #000, 4px 4px 0 #000, 5px 5px 0 #000, 6px 6px 0 #000, 7px 7px 0 #000;
 }
+
+.experimental-typography .animated-text {
+  font-size: 36px;
+  color: #0f0; /* Bright green color */
+  position: relative;
+  animation: glitchEffect 1s infinite;
+}
+
+@keyframes glitchEffect {
+  0%, 100% {
+      text-shadow: 2px 0 #f00, -2px 0 #00f; /* Red and blue shadows */
+      transform: skew(5deg);
+  }
+  33% {
+      text-shadow: -2px 0 #f00, 2px 0 #00f;
+      transform: skew(-5deg);
+  }
+  66% {
+      text-shadow: 2px 0 #f00, -2px 0 #00f;
+      transform: skew(5deg);
+  }
+}
+
+
+
+.minimalism-example .card {
+  width: 200px;
+  height: 100px;
+  background-color: #fff;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.minimalism-example .card:hover {
+  transform: scale(1.05);
+}
+
+.glass-container {
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+.glass-card {
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.glass-card p {
+  margin: 0;
+  padding: 20px;
+  color: #fff;
+  font-size: 16px;
+}
+
+
+.cube-container {
+  perspective: 600px;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cube {
+  position: relative;
+  width: 80px; /* Smaller size */
+  height: 80px; /* Smaller size */
+  transform-style: preserve-3d;
+  animation: rotateCube 5s infinite linear;
+}
+
+.cube .face {
+  position: absolute;
+  width: 80px; /* Smaller size */
+  height: 80px; /* Smaller size */
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #ccc;
+}
+
+/* Adding colors to each face */
+.cube .front  { background-color: #ff6666; transform: rotateY(0deg)    translateZ(40px); }
+.cube .back   { background-color: #66ff66; transform: rotateY(180deg)  translateZ(40px); }
+.cube .right  { background-color: #6666ff; transform: rotateY(90deg)   translateZ(40px); }
+.cube .left   { background-color: #ffff66; transform: rotateY(-90deg)  translateZ(40px); }
+.cube .top    { background-color: #66ffff; transform: rotateX(90deg)   translateZ(40px); }
+.cube .bottom { background-color: #ff66ff; transform: rotateX(-90deg)  translateZ(40px); }
+
+@keyframes rotateCube {
+  0%   { transform: rotateX(0) rotateY(0); }
+  100% { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+.neumorphism-example .neu-button:hover {
+  box-shadow: inset 5px 5px 10px #d1cfcb, inset -5px -5px 10px #ffffff;
+}
+
+.dark-mode-toggle button {
+  background-color: #333; /* Dark background */
+  color: #fff; /* Light text */
+  border: 2px solid #fff; /* Light border */
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.dark-mode-toggle button.light-mode {
+  background-color: #fff; /* Light background */
+  color: #333; /* Dark text */
+  border: 2px solid #333; /* Dark border */
+}
+

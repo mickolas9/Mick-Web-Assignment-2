@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mick Web Assignment 2</title>
+    <title>UI Trends Year in Review - Mick</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,7 +14,7 @@
   </head>
   <body>
     <header>
-      <h1><a href="index.html">UI Trends Year in Review</a></h1>
+      <h1><a id="homeLink" href="index.html">UI Trends Year in Review</a></h1>
     </header>
     <div class="grid-container">
       <a href="minimalism2.html" class="grid-item" id="minimalism"
@@ -260,5 +260,15 @@
     window.addEventListener('load', tileSVGForMobile);
     window.addEventListener('resize', tileSVGForMobile);
   </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var homeLink = document.getElementById("homeLink");
+      if (homeLink && window.location.pathname !== "/index.html") {
+        homeLink.innerHTML = 'Back'; // Change to a back icon or different text
+        homeLink.href = 'javascript:history.back()'; // Change href to go back
+      }
+    });
+  </script>
+  
   </body>
 </html>

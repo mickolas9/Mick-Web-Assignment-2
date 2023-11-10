@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mick Web Assignment 2</title>
+    <title>3D Visuals - UI Trends Year in Review</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,7 +14,7 @@
   </head>
   <body id="threedpage">
     <header>
-      <h1><a href="index.html">UI Trends Year in Review</a></h1>
+      <h1><a id="homeLink" href="index.html">UI Trends Year in Review</a></h1>
     </header>
 
     <div id="bg-wrap">
@@ -214,35 +214,48 @@
     </div>
 
     <div class="bento-container">
-      <h1>3D Models on 2D Screens</h1>
+      <div class="cube-container">
+        <div class="cube">
+            <div class="face front"></div>
+            <div class="face back"></div>
+            <div class="face right"></div>
+            <div class="face left"></div>
+            <div class="face top"></div>
+            <div class="face bottom"></div>
+        </div>
+    </div>
+    
+    
+      <h1>3D Visuals: Revolutionizing UI in 2023</h1>
       <p>
-        3D models are a design trend that has been gaining popularity in recent
-        years. They are a way to create a sense of depth and dimension in your
-        designs.
+        2023 saw a remarkable integration of 3D elements in UI, offering a
+        dynamic and engaging user experience across various platforms. These
+        visuals brought a new level of realism and interactivity to digital
+        products.
       </p>
-      <h2>The Impact of 3D Models</h2>
+      <h2>Engagement Through Dimension</h2>
       <p>
-        3D models have a significant impact on user experience. They can help to
-        create a sense of depth and dimension in your designs, which can lead to
-        a more immersive and engaging user experience.
+        The incorporation of 3D visuals provided a new level of engagement,
+        making interfaces more interactive and lively. This immersive approach
+        has been key in capturing and retaining user attention.
       </p>
-      <h2>How to Use 3D Models in Your Designs</h2>
+      <h2>Dynamic Aesthetics</h2>
       <p>
-        There are many ways to incorporate 3D models into your designs. One way
-        is to use a 3D model as the background of your website. Another way is
-        to use a 3D model as the main element on your website. Finally, you can
-        use a 3D model as a decorative element on your website.
-      </p>
-      <h2>Enhanced User Engagement</h2>
-      <p>
-        With the advancement of web technologies like WebGL and frameworks such
-        as Three.js, it's become possible to render complex 3D models directly
-        in web browsers without the need for additional plugins. These models
-        can be rotated, zoomed, and manipulated, giving users a sense of depth
-        and realism that 2D images cannot match. For instance, e-commerce sites
-        are using 3D models to showcase products from all angles, allowing
-        potential buyers to "experience" goods before making a purchase.
+        The dynamic aesthetics of 3D design elements enhanced the overall appeal
+        of user interfaces, marking a shift towards more immersive digital
+        experiences. This trend has bridged the gap between digital and physical
+        user interactions.
       </p>
     </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var homeLink = document.getElementById("homeLink");
+        if (homeLink && window.location.pathname !== "/index.html") {
+          homeLink.innerHTML = "Back"; // Change to a back icon or different text
+          homeLink.href = "javascript:history.back()"; // Change href to go back
+        }
+      });
+    </script>
   </body>
 </html>

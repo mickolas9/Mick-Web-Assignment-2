@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mick Web Assignment 2</title>
+    <title>Dark Mode - UI Trends Year in Review</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,7 +14,7 @@
   </head>
   <body id="darkmode">
     <header>
-      <h1><a href="index.html">UI Trends Year in Review</a></h1>
+      <h1><a id="homeLink" href="index.html">UI Trends Year in Review</a></h1>
     </header>
 
     <div id="bg-wrap">
@@ -214,30 +214,51 @@
     </div>
 
     <div class="bento-container">
-      <h1>Dark Mode in User Interfaces</h1>
+      <div class="dark-mode-toggle">
+        <button id="darkModeToggle">Toggle Dark Mode</button>
+    </div>
+    
+      <h1>Dark Mode: The New Norm in 2023</h1>
       <p>
-        Dark mode is a design trend that has been gaining popularity in recent
-        years. It is a color scheme that uses dark colors, such as black and
-        gray, instead of light colors, such as white and blue. Dark mode has a
-        significant impact on user experience. It can help to reduce eye strain
-        and improve readability, especially in low-light environments.
+        Dark Mode became a standard in UI design in 2023, offering users an
+        alternative visual experience that's easy on the eyes and
+        energy-efficient. Its widespread adoption marks a significant shift in
+        user preferences and design philosophies.
       </p>
-      <h2>Digital Wellness</h2>
+      <h2>Wellness in Digital Spaces</h2>
       <p>
-        Embracing the Dark Mode UI trend is more than a design choice; it's a
-        commitment to user wellness, offering a visual respite in an always-on
-        digital world. It allows users to experience the digital space as a
-        sanctuary for the eyes, with the added bonus of creating interfaces that
-        feel sophisticated and cutting-edge.
+        Adopting Dark Mode signified a step towards digital wellness, providing
+        a comfortable viewing experience in various lighting conditions. It
+        reflects a growing awareness of the importance of user comfort in design
+        decisions.
       </p>
-      <h2>Dark Mode UI: Comfort Meets Style</h2>
+      <h2>Style Meets Comfort</h2>
       <p>
-        Dark Mode UI prioritizes visual ergonomics by using darker hues to
-        reduce eye strain, especially in low-light environments, making digital
-        spaces comfortable for night-time users. This UI mode not only extends
-        battery life on OLED displays but also lends a sleek, modern look that
-        highlights other design elements through contrast.
+        Dark Mode's aesthetic appeal, combined with its ergonomic benefits,
+        marked a shift in how users interact with digital interfaces, especially
+        during night-time use. This mode has proven to be more than just a
+        trend, becoming a key feature in modern UI design.
       </p>
     </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var homeLink = document.getElementById("homeLink");
+        if (homeLink && window.location.pathname !== "/index.html") {
+          homeLink.innerHTML = "Back"; // Change to a back icon or different text
+          homeLink.href = "javascript:history.back()"; // Change href to go back
+        }
+      });
+    </script>
+    <script>
+      document.getElementById('darkModeToggle').addEventListener('click', function() {
+          this.classList.toggle('light-mode');
+          if (this.classList.contains('light-mode')) {
+              this.textContent = 'Dark Mode';
+          } else {
+              this.textContent = 'Light Mode';
+          }
+      });
+  </script>
   </body>
 </html>

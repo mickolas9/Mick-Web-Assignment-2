@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mick Web Assignment 2</title>
+    <title>Experimental Typography - UI Trends Year in Review</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,7 +14,7 @@
   </head>
   <body id="typepage">
     <header>
-      <h1><a href="index.html">UI Trends Year in Review</a></h1>
+      <h1><a id="homeLink" href="index.html">UI Trends Year in Review</a></h1>
     </header>
 
     <div id="bg-wrap">
@@ -214,6 +214,10 @@
     </div>
 
     <div class="bento-container">
+      <div class="experimental-typography">
+        <p class="animated-text">Dynamic Text</p>
+    </div>    
+    
       <h1>The Rise of Experimental Typography</h1>
       <p>
         Experimental typography in UI design marks a shift from conventional
@@ -256,5 +260,15 @@
         through a digital ecosystem.
       </p>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var homeLink = document.getElementById("homeLink");
+        if (homeLink && window.location.pathname !== "/index.html") {
+          homeLink.innerHTML = 'Back'; // Change to a back icon or different text
+          homeLink.href = 'javascript:history.back()'; // Change href to go back
+        }
+      });
+    </script>
+    
   </body>
 </html>

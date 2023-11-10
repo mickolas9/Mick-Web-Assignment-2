@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mick Web Assignment 2</title>
+    <title>Glass UI - UI Trends Year in Review</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,7 +14,7 @@
   </head>
   <body id="glasspage">
     <header>
-      <h1><a href="index.html">UI Trends Year in Review</a></h1>
+      <h1><a id="homeLink" href="index.html">UI Trends Year in Review</a></h1>
     </header>
 
     <div id="bg-wrap">
@@ -212,32 +212,67 @@
         </rect>
       </svg>
     </div>
-
     <div class="bento-container">
-      <h1>Using Glass to Create Memorable Design</h1>
+      <div class="glass-container">
+        <div class="glass-card" id="glassCard">
+            <p>Glassmorphism in Action :) Move your mouse left or right to see the glass tilt :)</p>
+        </div>
+    </div>
+    
+    
+      <h1>Glassmorphism: The Trend of Transparency in 2023</h1>
       <p>
-        Glass is a design trend that has been gaining popularity in recent
-        years. It is a material that can be used to create a sense of depth and
-        dimension in your designs.
+        Glassmorphism introduced a new dimension to UI design this year,
+        featuring translucent elements that created a sense of depth and
+        modernity. The style’s popularity soared, becoming synonymous with
+        contemporary and futuristic designs.
       </p>
-      <h2>Glass UI: The Clarity Trend</h2>
+      <h2>Depth and Layering</h2>
       <p>
-        Glass UI, inspired by the look of frosted glass, utilizes background
-        blur and transparency to create a sense of depth and layering, giving
-        applications a lightweight, airy feel. This style leverages subtle
-        reflections and light to add a touch of realism, fostering a clean and
-        futuristic user environment that harmonizes with a wide range of design
-        aesthetics.
+        The use of layered, glass-like surfaces in UI design brought a fresh
+        perspective to digital interfaces, making them visually appealing and
+        engaging. This technique added a new level of sophistication to the
+        visual hierarchy of user interfaces.
       </p>
-      <h2>Transparency in Interaction</h2>
+      <h2>Modern Aesthetics</h2>
       <p>
-        The Glass UI trend continues to impress with its ability to overlay
-        information while still providing a glimpse of what's underneath,
-        fostering an environment where clarity and content coexist beautifully.
-        This design trend plays with the idea of transparency, both literally
-        and figuratively, encouraging open and light-filled digital spaces that
-        seem to extend beyond the screen.
+        Glassmorphism's modern aesthetics resonated across various platforms,
+        emphasizing clean and contemporary design principles. Its unique
+        approach to light and transparency has set new standards in UI design.
       </p>
     </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var homeLink = document.getElementById("homeLink");
+        if (homeLink && window.location.pathname !== "/index.html") {
+          homeLink.innerHTML = "Back"; // Change to a back icon or different text
+          homeLink.href = "javascript:history.back()"; // Change href to go back
+        }
+      });
+    </script>
+
+    <script>
+      const glassCard = document.getElementById('glassCard');
+  
+      document.querySelector('.glass-container').addEventListener('mousemove', e => {
+          const rect = glassCard.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+  
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+  
+          const deltaX = (x - centerX) / 20;
+          const deltaY = (y - centerY) / 20;
+  
+          glassCard.style.transform = `rotateY(${deltaX}deg) rotateX(${deltaY}deg)`;
+      });
+  
+      document.querySelector('.glass-container').addEventListener('mouseleave', () => {
+          glassCard.style.transform = 'none';
+      });
+  </script>
+  
   </body>
 </html>
